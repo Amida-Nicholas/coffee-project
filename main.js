@@ -34,10 +34,7 @@ function changeRoast() {
 }
 
 // Changes the coffee live as the user types. Will essentially grab the value inputed as the user types and runs updateCoffes() every letter
-function autofillCoffee() {
-    nameInput = document.querySelector('#name-input');
-    updateCoffees();
-}
+
 
 
 function renderCoffee(coffee) {
@@ -58,10 +55,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
-// e is an event
-// not truly submitting form
-// took e off for changeRoast & autofill functions to work
-function updateCoffees(e) {
+
+function updateCoffees() {
     // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var selectedName = nameInput.value;
@@ -80,7 +75,7 @@ function updateCoffees(e) {
     divCoffee.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function updateCoffeesTwo(e) {
+function updateCoffeesTwo() {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoastTwo = roastSelectionTwo.value;
     var selectedNameTwo = nameInputTwo.value;

@@ -24,7 +24,7 @@
 
             <form>
                 <label for="roast-selection" class="form-label">Roast</label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg " id="roast-selection" onchange="changeRoast()">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg "id="roast-selection" onchange="changeRoast()">
                     <option selected>All</option>
                     <option>light</option>
                     <option>medium</option>
@@ -33,9 +33,9 @@
 
 
                 <label for="name-input" class="form-label">Coffee Name</label>
-                <input class="form-control" id="name-input" name="name-input" type="text" placeholder="Coffee Name">
+                <input class="form-control" id="name-input" name="name-input" type="text" placeholder="Coffee Name" oninput="autofillCoffee()">
                 <br>
-                <button  class=" btn btn-primary text-center  w-100 submit2" type="submit">Submit</button>
+                <button  class=" btn btn-primary text-center w-100 submit2" type="submit">Submit</button>
             </form>
 
 
@@ -44,7 +44,7 @@
 
             <form>
                 <label for="roast-selection2" class="form-label">Roast</label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" id="roast-selection2" onchange="changeRoast()">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" id="roast-selection-two">
 
                     <option>All</option>
                     <option>light</option>
@@ -54,7 +54,7 @@
 
                 <h6>Coffee Name</h6>
                 <label for="name-input-two" class="form-label">Name</label>
-                <input class="form-control" id="name-input-two" type="text" placeholder="Coffee Name">
+                <input class="form-control" name="name-input-two" id="name-input-two" type="text" placeholder="Coffee Name">
                 <br>
 
                 <button  class=" btn btn-primary text-center  w-100 submit2" type="submit">Submit</button>
