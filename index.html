@@ -13,7 +13,7 @@
 
 
 <nav class="navbar navbar-expand-md navbar-light my-5">
-    <h1 class="navbar-brand mx-auto">Coffee!</h1>
+    <h1 class="mx-auto">Coffee!</h1>
 </nav>
 
 <div class="container">
@@ -24,16 +24,16 @@
 
             <form>
                 <label for="roast-selection" class="form-label">Roast</label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg " id="roast-selection">
-                    <option>All</option>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg " id="roast-selection" onchange="changeRoast()">
+                    <option selected>All</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
 
 
-                <label for="input-name" class="form-label">Coffee Name</label>
-                <input class="form-control" id="input-name" type="text" placeholder="Coffee Name">
+                <label for="name-input" class="form-label">Coffee Name</label>
+                <input class="form-control" id="name-input" name="name-input" type="text" placeholder="Coffee Name">
                 <br>
                 <button  class=" btn btn-primary text-center  w-100 submit2" type="submit">Submit</button>
             </form>
@@ -63,7 +63,9 @@
 
         </div>
 
-        <div  class="col-6 order-1 w-50 ">
+        <div id="coffees" class="col-6 order-1 w-50 ">
+            
+
             <div class="row coffees22 ">
                 <div class="col-6 ">
                     <div class="row">
