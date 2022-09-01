@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,12 +6,16 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    <title></title>
+
+    <title>Coffee Project</title>
 </head>
 
+<body>
 
 <nav class="navbar navbar-expand-md navbar-light my-5">
+
     <h1 class="mx-auto">Coffee!</h1>
 </nav>
 
@@ -20,12 +23,10 @@
     <div class="row ">
 
         <div class="col-6 w-50 align-items-start order-2">
-
-
             <form>
                 <label for="roast-selection" class="form-label">Roast</label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg "id="roast-selection" onchange="changeRoast()">
-                    <option selected>All</option>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" id="roast-selection" onchange="changeRoast()">
+                    <option selected>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
@@ -35,15 +36,14 @@
                 <label for="name-input" class="form-label">Coffee Name</label>
                 <input class="form-control" id="name-input" name="name-input" type="text" placeholder="Coffee Name" oninput="autofillCoffee()">
                 <br>
-                <button  class=" btn btn-primary text-center w-100 submit2" type="submit">Submit</button>
-            </form>
+                
 
 
             <h2 class="text-center">Add a Coffee!</h2>
 
 
             <form>
-                <label for="roast-selection2" class="form-label">Roast</label>
+                <label for="roast-selection-two" class="form-label">Roast</label>
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" id="roast-selection-two">
 
                     <option>All</option>
@@ -57,43 +57,27 @@
                 <input class="form-control" name="name-input-two" id="name-input-two" type="text" placeholder="Coffee Name">
                 <br>
 
-                <button  class=" btn btn-primary text-center  w-100 submit2" type="submit">Submit</button>
+                <button id="submit" class=" btn btn-primary text-center w-100" type="submit">Submit</button>
+                <br>
+                <div>
+                <button id='submitcoffee' class="btn btn-primary text-center w-100" type="submit">Add Coffee</button>
+                </div>
             </form>
-
-
         </div>
 
-        <div id="coffees" class="col-6 order-1 w-50 ">
-            
-
-            <div class="row coffees22 ">
-                <div class="col-6 ">
-                    <div class="row">
-                        <h3 class="col-6 "></h3>
-                        <p class="col-6"></p>
-
-                    </div>
-                </div>
-
-            <div class="col-6 ">
-                <div class="row coffees22">
-
-                    <h3 class="col-6 c-name"></h3>
-
-
-                    <p class="col-6 c-roast"></p>
-
-
-                </div>
-            </div>
-            </div>
-        </div>
+    
+        <div id="coffees" class="d-flex flex-wrap row-cols-2 order-1 w-50"></div>
+        
     </div>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+
 <script src="main.js"></script>
+
 
 </body>
 </html>

@@ -1,9 +1,4 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body {
+    background-image: url('https://img.freepik.com/free-vector/grey-weathered-parchment_53876-86278.jpg?w=826&t=st=1662059710~exp=1662060310~hmac=7d04caa00c15984e75ce635045b89fe3c98a3cae758f8b12a292feebcd450515');
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}

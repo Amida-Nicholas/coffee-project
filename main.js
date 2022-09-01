@@ -19,13 +19,34 @@ var coffees = [
 ];
 
 
+
+
 var divCoffee = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
+
 var nameInput = document.querySelector('#name-input');
 
-var roastSelectionTwo = document.querySelector('#roast-selection-two');
-var nameInputTwo = document.querySelector('#name-input-two');
+
+
+
+function addCoffee(e) {
+    e.preventDefault();
+
+    var userCoffee = {};
+
+    var userRoast = document.getElementById('roast-selection-two').value;
+    var userName = document.getElementById('name-input-two').value;
+    var userId = (coffees.length + 1);
+
+    userCoffee.id = userId;
+    userCoffee.roast = userRoast;
+    userCoffee.name = userName;
+    coffees.push(userCoffee);
+
+    updateCoffees();
+}
 
 // Changes the roast if the user selects a different roasts, then updates the HTML table
 function changeRoast() {
@@ -42,8 +63,8 @@ function autofillCoffee() {
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h3 class="c-name">' + coffee.name + '</h2>';
-    html += '<p class="c-roast">' + coffee.roast + '</p>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -78,27 +99,9 @@ function updateCoffees() {
     divCoffee.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function updateCoffeesTwo() {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoastTwo = roastSelectionTwo.value;
-    var selectedNameTwo = nameInputTwo.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoastTwo || "all" === selectedRoastTwo)  {
-            if (coffee.name.toLowerCase().includes(selectedNameTwo.toLowerCase()))  {
-                filteredCoffees.push(coffee);
-            } else if ("" === selectedNameTwo) {
-                filteredCoffees.push(coffee);
-            }
-        } 
-        // console.log(coffee.name, coffee.roast);
-
-    });
-    divCoffee.innerHTML = renderCoffees(filteredCoffees);
-}
-
+var newCoffee = document.getElementById('submitcoffee');
 //plural
 divCoffee.innerHTML = renderCoffees(coffees);
-
+newCoffee.addEventListener('click', addCoffee);
 submitButton.addEventListener('click', updateCoffees);
 
