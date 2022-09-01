@@ -33,7 +33,7 @@ function changeRoast() {
     updateCoffees();
 }
 
-// Changes the coffee live as the user types. Will essentially grab the value inputed as the user types and runs updateCoffes() every letter
+// Changes the coffee live as the user types. 
 function autofillCoffee() {
     nameInput = document.querySelector('#name-input');
     updateCoffees();
