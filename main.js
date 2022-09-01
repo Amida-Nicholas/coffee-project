@@ -34,7 +34,10 @@ function changeRoast() {
 }
 
 // Changes the coffee live as the user types. Will essentially grab the value inputed as the user types and runs updateCoffes() every letter
-
+function autofillCoffee() {
+    nameInput = document.querySelector('#name-input');
+    updateCoffees();
+}
 
 
 function renderCoffee(coffee) {
@@ -87,7 +90,7 @@ function updateCoffeesTwo() {
             } else if ("" === selectedNameTwo) {
                 filteredCoffees.push(coffee);
             }
-        }
+        } 
         // console.log(coffee.name, coffee.roast);
 
     });
